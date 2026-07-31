@@ -1,0 +1,38 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.nymcard.com/get-started/api-core-principles.md
+standards:
+- id: pci-dss
+  conforms: true
+  level: Level 1
+  evidence: >-
+    "The nCore is PCI DSS level 1 certified and is scrutinized by a
+    PCI-certified auditor" — API Core Principles, API Security section.
+- id: visa-principal-member
+  conforms: true
+  evidence: NymCard is a principal member of Visa (company site).
+- id: mastercard-principal-member
+  conforms: true
+  evidence: NymCard is a principal member of Mastercard (company site).
+- id: 3d-secure
+  conforms: true
+  evidence: docs.nymcard.com/get-started/security/3d-secure (3DS authentication)
+- id: tls
+  conforms: true
+  evidence: APIs available only over TLS (HTTPS enforced).
+- id: idempotency
+  conforms: true
+  evidence: x-nymos-idempotency-key supported on all POST requests.
+- id: cursor-pagination
+  conforms: true
+  evidence: limit/after cursor pagination on list endpoints.
+- id: oauth2
+  conforms: false
+  evidence: API uses static API-key auth, not OAuth2.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Errors use plain HTTP status codes, not application/problem+json.
+compliance_program:
+  published: true
+  certifications: [PCI DSS Level 1]
+  scheme_membership: [Visa principal member, Mastercard principal member]

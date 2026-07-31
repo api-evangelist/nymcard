@@ -1,0 +1,28 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.nymcard.com/get-started/api-core-principles.md
+versioning:
+  scheme: uri-path
+  current: v1
+  example: https://api.nymcard.com/v1/cardproducts
+  docs: https://docs.nymcard.com/get-started/api-core-principles
+  policy: >-
+    The API version is incremented only when a major change is introduced; minor
+    changes, patches and bug fixes are released periodically without a version
+    increment.
+deprecation:
+  policy: >-
+    When a new major version is released, consumers may continue on the existing
+    version or migrate until old versions are deprecated. nCore users are
+    informed in advance of version deprecation timelines and given sufficient
+    time to upgrade.
+  policy_url: https://docs.nymcard.com/get-started/api-core-principles
+  advance_notice: true
+release_notes:
+  url: https://docs.nymcard.com/get-started/release-announcements
+  ref: changelog/nymcard-changelog.yml
+status_page: null
+sla: null
+notes: >-
+  No public status page or published SLA was found. Versioning and a
+  deprecation/advance-notice policy are documented.

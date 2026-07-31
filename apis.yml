@@ -1,8 +1,28 @@
 aid: nymcard
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nymcard.png
 name: Nymcard
-description: 'Nymcard is a company surfaced as a portfolio company of qed-investors and added to the API
-  Evangelist network as a stub for enrichment. Sector: payments. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: >-
+  NymCard is a MENA-based, full-stack payments infrastructure provider whose nCore
+  platform gives banks, fintechs and enterprises RESTful APIs to launch and manage
+  card programs. nCore covers card issuing (virtual, physical, prepaid, debit,
+  credit and tokenized cards), user KYC/KYB onboarding, funding and transfers,
+  product management (balance and velocity limits, fees, MCC authorization
+  controls), the full transaction lifecycle, 3D Secure, PCI-compliant PAN
+  handling, webhooks and embedded lending. The platform is PCI DSS Level 1
+  certified and NymCard is a principal member of both Visa and Mastercard, with
+  offices in London and Dubai. Backed by QED Investors.
 url: https://raw.githubusercontent.com/api-evangelist/nymcard/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,16 +32,93 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
 - Payments
-apis: []
+- Card Issuing
+- Banking as a Service
+- Fintech
+- Embedded Finance
+- MENA
+apis:
+- name: nCore API
+  description: >-
+    RESTful card-issuing and payments platform API for users, cards, card
+    products, accounts, funding/transfers, limits, transactions and webhooks.
+  humanURL: https://docs.nymcard.com/
+  baseURL: https://api.nymcard.com/v1
+  properties:
+  - type: Documentation
+    url: https://docs.nymcard.com/
+  - type: APIReference
+    url: https://portal.stg.platform.ae-1.nymcard.com/default/documentation/02_api_specs
+  - type: GettingStarted
+    url: https://docs.nymcard.com/get-started/quick-tutorial
+  - type: Authentication
+    url: authentication/nymcard-authentication.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DeveloperPortal
+  url: https://docs.nymcard.com/
+- type: Documentation
+  url: https://docs.nymcard.com/
+- type: APIReference
+  url: https://portal.stg.platform.ae-1.nymcard.com/default/documentation/02_api_specs
+- type: GettingStarted
+  url: https://docs.nymcard.com/get-started/quick-tutorial
+- type: Blog
+  url: https://www.nymcard.com/company/blog
+- type: Support
+  url: https://www.nymcard.com/company/contact
+- type: SignUp
+  url: https://portal.sand.platform.nymcard.com/default/login
+- type: PrivacyPolicy
+  url: https://www.nymcard.com/legal/privacy
+- type: Postman
+  url: https://god.gw.postman.com/run-collection/19938718-ce866362-3acf-4546-8ae4-9b5a15f99811?action=collection%2Ffork&source=rip_markdown
+- type: Authentication
+  url: authentication/nymcard-authentication.yml
+- type: Conventions
+  url: conventions/nymcard-conventions.yml
+- type: Idempotency
+  url: conventions/nymcard-conventions.yml
+- type: ErrorCatalog
+  url: errors/nymcard-problem-types.yml
+- type: DeclineCodes
+  url: errors/nymcard-decline-codes.yml
+- type: Lifecycle
+  url: lifecycle/nymcard-lifecycle.yml
+- type: Deprecation
+  url: lifecycle/nymcard-lifecycle.yml
+- type: ChangeLog
+  url: changelog/nymcard-changelog.yml
+- type: Conformance
+  url: conformance/nymcard-conformance.yml
+- type: Compliance
+  url: conformance/nymcard-conformance.yml
+- type: Webhooks
+  url: asyncapi/nymcard-webhooks.yml
+- type: Sandbox
+  url: sandbox/nymcard-sandbox.yml
+- type: MCPServer
+  url: mcp/nymcard-mcp.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: LLMsTxt
+  url: llms/nymcard-llms.txt
+- type: WellKnown
+  url: well-known/nymcard-well-known.yml
+- type: DomainSecurity
+  url: security/nymcard-domain-security.yml
 - type: Website
   url: http://www.nymcard.com
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 14
+  pass: local-v1

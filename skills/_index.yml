@@ -1,0 +1,8 @@
+generated: '2026-07-20'
+method: generated
+source: https://docs.nymcard.com/get-started/quick-tutorial
+skills:
+- file: nymcard-issue-and-fund-card.md
+  name: Issue and fund an nCore card
+  api: NymCard nCore
+  operations: [createUser, listCardProducts, createCard, getCardAccounts, loadAccountFunds, getAccount]

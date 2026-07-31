@@ -1,0 +1,39 @@
+generated: '2026-07-20'
+method: derived
+status: candidate
+source: >-
+  Derived from documented nCore operations in the Quick Tutorial / API reference
+  (https://portal.stg.platform.ae-1.nymcard.com/default/documentation/02_api_specs).
+  No official hosted/remote MCP server was found for NymCard as of the probe date.
+server:
+  name: nymcard-ncore
+  transport: http
+  url: null
+auth:
+  type: apiKey
+  header: apikey
+tools:
+- name: create_user
+  description: Create a cardholder user (POST /users)
+  source_operation: createUser
+- name: list_card_products
+  description: List card products / templates (GET /cardproducts)
+  source_operation: listCardProducts
+- name: create_card
+  description: Issue a virtual or physical card for a user (POST /cards)
+  source_operation: createCard
+- name: get_card_accounts
+  description: Retrieve the account(s) linked to a card (GET /cards/{id}/accounts)
+  source_operation: getCardAccounts
+- name: load_account_funds
+  description: Load funds into a card account (POST /accounts/{id}:loadfunds)
+  source_operation: loadAccountFunds
+- name: get_account
+  description: Retrieve a card account balance (GET /accounts/{id})
+  source_operation: getAccount
+- name: create_balance_limit
+  description: Create a balance limit for spend control (POST /balancelimits)
+  source_operation: createBalanceLimit
+notes: >-
+  Candidate tool list only. operationIds are taken verbatim from the published
+  nCore API reference operation anchors; no operations are invented.

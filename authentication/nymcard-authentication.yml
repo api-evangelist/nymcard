@@ -1,0 +1,22 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.nymcard.com/get-started/api-core-principles.md
+docs: https://docs.nymcard.com/get-started/api-core-principles
+summary:
+  types: [apiKey]
+  api_key_in: [header]
+  oauth2_flows: []
+schemes:
+- name: apikey
+  type: apiKey
+  in: header
+  parameter_name: apikey
+  description: >-
+    The nCore API uses standard API-key authentication. After signing up on the
+    nCore platform you receive a static API key whose value does not change. It
+    must be supplied in the `apikey` request header on every call. All API
+    traffic is served only over TLS (HTTPS).
+  sources: [docs.nymcard.com/get-started/api-core-principles]
+notes: >-
+  Webhook callbacks from nCore to your endpoint use HTTP Basic Auth (base64
+  encoded) in the notification header — see asyncapi/nymcard-webhooks.yml.

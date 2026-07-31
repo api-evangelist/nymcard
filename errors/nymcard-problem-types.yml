@@ -1,0 +1,46 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.nymcard.com/get-started/api-core-principles.md
+format: http-status
+envelope: HTTP response codes (nCore uses standard HTTP status codes)
+problems:
+- status: 200
+  title: OK
+  description: Your request was successfully completed
+- status: 401
+  title: Unauthorized
+  description: Authentication is invalid or has expired
+- status: 403
+  title: Forbidden
+  description: Client was forbidden to execute the operation, often due to lack of permissions
+- status: 404
+  title: Resource Not Exist
+  description: The resource you are trying to find does not exist
+- status: 408
+  title: Request Timeout
+  description: The request has timed out
+- status: 409
+  title: Duplicate Request
+  description: The request is conflicting with another one
+- status: 429
+  title: Request Attempt Exceed
+  description: >-
+    User has reached their request attempt limits and must wait before retrying
+- status: 500
+  title: Internal Server Error
+  description: The server is unable to handle this request at the moment
+- status: 501
+  title: Implementation Error
+  description: Contracts were defined but haven't been implemented
+- status: 502
+  title: Service Unavailable
+  description: An external infrastructure has crashed
+- status: 503
+  title: Internet Issue
+  description: Poor internet connection
+- status: 504
+  title: Gateway Timeout
+  description: The server timed out while attempting to complete this request
+notes: >-
+  API-level HTTP error catalog. Payment authorization decline/transaction status
+  codes are captured separately in errors/nymcard-decline-codes.yml.

@@ -1,0 +1,43 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.nymcard.com/get-started/api-core-principles.md
+docs: https://docs.nymcard.com/get-started/api-core-principles
+api: nCore
+authentication:
+  style: api-key
+  header: apikey
+  ref: authentication/nymcard-authentication.yml
+idempotency:
+  supported: true
+  header: x-nymos-idempotency-key
+  scope: all POST requests
+  description: >-
+    All nCore POST requests are idempotency-capable. Supplying the same
+    `x-nymos-idempotency-key` header when retrying a request (e.g. after a
+    network timeout) has no additional effect and returns the original result.
+pagination:
+  style: cursor
+  request_params: [limit, after]
+  response_fields: [paging, after, has_more]
+  default_sort: object creation date, descending
+  description: >-
+    List endpoints support cursor pagination via `limit` and `after` query
+    params; responses carry `paging`, `after`, and `has more` fields. Sorting
+    defaults to creation date descending.
+versioning:
+  scheme: uri-path
+  current: v1
+  example: https://api.nymcard.com/v1/cardproducts
+  policy: >-
+    Version is incremented on major changes only; minor patches/bug fixes ship
+    without a version bump. Deprecation timelines are announced in advance.
+  ref: lifecycle/nymcard-lifecycle.yml
+error_envelope:
+  transport: HTTP status codes (2xx success, 4xx client, 5xx platform)
+  transaction_status: numeric status_code + status_description on transactions
+  ref: errors/nymcard-problem-types.yml
+transport:
+  tls_only: true
+  formats: [application/json]
+notes: >-
+  Cross-cutting semantics captured from the nCore API Core Principles page.

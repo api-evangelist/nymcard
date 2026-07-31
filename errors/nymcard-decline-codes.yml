@@ -1,0 +1,93 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.nymcard.com/get-started/api-core-principles.md
+envelope_field: status_code (with status_description) on transaction response messages
+note: >-
+  These are nCore transaction status codes returned on card authorization /
+  transaction messages. The full list is published as a downloadable file in the
+  docs; below is the common set published inline on the API Core Principles page.
+  This complements the API-level HTTP error catalog in
+  errors/nymcard-problem-types.yml.
+decline_codes:
+- {code: '0000', meaning: Transaction approved}
+- {code: '0001', meaning: Honor with identification}
+- {code: '0002', meaning: Partially approved}
+- {code: '0003', meaning: Approved (VIP)}
+- {code: '0885', meaning: Not Declined}
+- {code: '1003', meaning: Card suspended}
+- {code: '1006', meaning: Maximum PIN tries exceeded}
+- {code: '1010', meaning: Invalid amount}
+- {code: '1018', meaning: No card record}
+- {code: '1019', meaning: Transaction not permitted to cardholder}
+- {code: '1020', meaning: Transaction not permitted to terminal}
+- {code: '1021', meaning: Exceeds withdrawal amount limit}
+- {code: '1022', meaning: Security Violation}
+- {code: '1804', meaning: Card expiry mismatch}
+- {code: '1806', meaning: Card not active}
+- {code: '1809', meaning: Card Permanently Closed}
+- {code: '1810', meaning: Incorrect ARQC}
+- {code: '1816', meaning: Card Terminated by Issuer}
+- {code: '1829', meaning: Max Amount Limit Reached}
+- {code: '1832', meaning: ATM transaction is not allowed}
+- {code: '1837', meaning: Transaction is not allowed because of absence of PIN}
+- {code: '1838', meaning: E-commerce Non 3DS transaction is not allowed}
+- {code: '1839', meaning: E-commerce 3DS transaction is not allowed}
+- {code: '1840', meaning: E-commerce without CVV2 transaction is not allowed}
+- {code: '1841', meaning: Quasi Cash transaction not allowed}
+- {code: '1842', meaning: Scheme Account Funding transaction is not allowed}
+- {code: '1843', meaning: Scheme Credit transaction is not allowed}
+- {code: '1844', meaning: Account Verification without CVV2 transaction is not allowed}
+- {code: '1845', meaning: Card Product is not configured}
+- {code: '1846', meaning: POS Data Code is not received in transaction}
+- {code: '1847', meaning: Card Product not found}
+- {code: '1848', meaning: Invalid service code defined in CardSettings}
+- {code: '1849', meaning: Incoming transfers are not allowed on this card product}
+- {code: '1850', meaning: Outgoing transfers are not allowed on this card product}
+- {code: '1851', meaning: Fraud engine check has rejected the transaction}
+- {code: '1852', meaning: Fraud check was not successful}
+- {code: '1853', meaning: Pan generation error}
+- {code: '1854', meaning: Completion amount greater than original}
+- {code: '1855', meaning: Completion amount greater than threshold}
+- {code: '1856', meaning: Non-approved STIP advice}
+- {code: '1857', meaning: Presentment not found}
+- {code: '1858', meaning: Transaction type does not match}
+- {code: '1859', meaning: Transaction is not allowed from this MCC}
+- {code: '1860', meaning: Transaction is not allowed from this country}
+- {code: '1862', meaning: ATM transaction is not allowed (Card Level)}
+- {code: '1863', meaning: POS transaction is not allowed (Card Level)}
+- {code: '1864', meaning: Chip transaction is not allowed (Card Level)}
+- {code: '1865', meaning: Magstripe transaction is not allowed (Card Level)}
+- {code: '1866', meaning: Chip Fallback transaction is not allowed (Card Level)}
+- {code: '1867', meaning: Transaction is not allowed because of absence of PIN (Card Level)}
+- {code: '1868', meaning: E-commerce Non 3DS transaction is not allowed (Card Level)}
+- {code: '1869', meaning: E-commerce 3DS transaction is not allowed (Card Level)}
+- {code: '1870', meaning: E-commerce without CVV2 transaction is not allowed (Card Level)}
+- {code: '1871', meaning: Quasi Cash transaction not allowed (Card Level)}
+- {code: '1872', meaning: Scheme Account Funding transaction is not allowed (Card Level)}
+- {code: '1873', meaning: Scheme Credit transaction is not allowed (Card Level)}
+- {code: '1874', meaning: Account Verification without CVV2 transaction is not allowed (Card Level)}
+- {code: '1875', meaning: Maximum account balance limit reached}
+- {code: '1876', meaning: Minimum account balance limit reached}
+- {code: '1877', meaning: Maximum user balance limit reached}
+- {code: '1878', meaning: Minimum user balance limit reached}
+- {code: '1879', meaning: Transaction is not allowed from this MCC (Card Level)}
+- {code: '1880', meaning: Transaction is not allowed from this country (Card Level)}
+- {code: '1881', meaning: Min Amount Limit Reached}
+- {code: '1882', meaning: Min Amount Limit Reached (Card Level)}
+- {code: '1883', meaning: Max Amount Limit Reached (Card Level)}
+- {code: '1888', meaning: Illegal operation request}
+- {code: '1889', meaning: Transaction timed out}
+- {code: '1890', meaning: Wallet not active}
+- {code: '1892', meaning: Cardholder not valid}
+- {code: '1893', meaning: Cardholder Phone not present}
+- {code: '1894', meaning: Previously Cancelled}
+- {code: '1895', meaning: Stop Recurring Payment}
+- {code: '1896', meaning: Advance velocity per transaction limit was exceeded}
+- {code: '1897', meaning: Advance velocity cumulative amount limit was exceeded}
+- {code: '1898', meaning: Advance velocity transaction frequency limit was exceeded}
+- {code: '1899', meaning: Cash-in not allowed (card)}
+- {code: '1900', meaning: Cash-out not allowed (card)}
+- {code: '1901', meaning: ATM deposit not allowed (card)}
+- {code: '1902', meaning: ATM deposit transaction is not allowed (tenant level)}
+- {code: '9114', meaning: Original not found}
+- {code: '9115', meaning: Original declined}

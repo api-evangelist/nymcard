@@ -1,0 +1,29 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.nymcard.com/get-started/quick-tutorial.md
+environments:
+- name: sandbox
+  signup: https://portal.sand.platform.nymcard.com/default/login
+  host: portal.sand.platform.nymcard.com
+  purpose: Self-service sign-up to obtain an API key and access the nCore platform
+- name: staging
+  host: portal.stg.platform.ae-1.nymcard.com
+  api_reference: https://portal.stg.platform.ae-1.nymcard.com/default/documentation/02_api_specs
+- name: production
+  base_url: https://api.nymcard.com/v1
+access:
+  model: static API key supplied in the `apikey` header
+  ref: authentication/nymcard-authentication.yml
+tooling:
+  postman:
+    description: Public nCore Postman collection (Run in Postman)
+    run_url: https://god.gw.postman.com/run-collection/19938718-ce866362-3acf-4546-8ae4-9b5a15f99811?action=collection%2Ffork&source=rip_markdown
+    variable_required: apikey
+  webhook_simulation:
+    description: Webhook changes for simulation are documented for test-mode event triggering
+    docs: https://docs.nymcard.com/get-started/webhooks/webhook-changes-for-simulation
+notes: >-
+  nCore separates sandbox (portal.sand), staging (portal.stg), and production
+  (api.nymcard.com) environments. No published magic/test card numbers were
+  found inline in the docs — sign up in the sandbox to provision test programs.
+  No test values are fabricated here.

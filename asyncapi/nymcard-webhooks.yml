@@ -1,0 +1,35 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.nymcard.com/get-started/webhooks/ncore-webhook-events.md
+spec_type: Webhooks
+transport: HTTPS POST (JSON payload) from nCore to a pre-configured receiver
+security:
+  scheme: HTTP Basic Auth
+  encoding: base64 header in the webhook notification message
+delivery:
+  retries: nCore maintains a retry counter and resends failed notifications
+  connectivity_check: nCore pings a configured webhook to validate credentials and connectivity
+  uniqueness: each webhook is identified by a unique event token; each transaction by a unique transaction token
+docs:
+  introduction: https://docs.nymcard.com/get-started/webhooks/introduction-to-webhooks
+  events: https://docs.nymcard.com/get-started/webhooks/ncore-webhook-events
+  configure: https://docs.nymcard.com/get-started/webhooks/steps-to-configure-a-webhook
+  samples: https://docs.nymcard.com/get-started/webhooks/webhooks-samples
+  management: https://docs.nymcard.com/get-started/webhooks/webhooks-management
+events:
+- {name: Status change, type: CARD_STATUS_CHANGE, when: A card status is updated}
+- {name: Transaction, type: TRANSACTION, when: A transaction is performed by a card}
+- {name: KYC, type: KYC_RESULT, when: Changes in user's KYC request are done}
+- {name: User creation, type: USER_CREATED, when: User is created}
+- {name: User status, type: USER_STATUS_CHANGE, when: User status is changed}
+- {name: User document, type: USER_DOCUMENT_ALERT, when: The document expiration date is approaching}
+- {name: IDV, type: IDENTITY_VERIFICATION, when: Identity verification needed}
+- {name: PIN change, type: PIN_CHANGE, when: PIN is changed}
+- {name: Auth expiry, type: EXPIRED_AUTH, when: Auth/pre-auth is expired}
+- {name: Charges, type: CHARGE_APPLIED, when: Charges are applied}
+- {name: Account status, type: ACCOUNT_STATUS_CHANGE, when: Account status is changed}
+- {name: Card provisioning, type: CARD_PROVISIONING, when: Card is tokenized}
+- {name: Token notification, type: TOKEN_NOTIFICATION, when: Digital wallet token status is updated}
+- {name: Card or account creation, type: SUCCESSFULLY_CREATED, when: Card or account is successfully created}
+- {name: Card delivery, type: CARD_DELIVERY_PARTNER_ASSIGNED, when: Card delivery partner is assigned}
+- {name: Card delivery, type: CARD_DELIVERY_STATUS_CHANGED, when: Card delivery status is changed}
