@@ -1,9 +1,7 @@
 generated: '2026-07-20'
 method: derived
 status: candidate
-source: >-
-  Derived from documented nCore operations in the Quick Tutorial / API reference
-  (https://portal.stg.platform.ae-1.nymcard.com/default/documentation/02_api_specs).
+source: Derived from documented nCore operations in the Quick Tutorial / API reference (https://portal.stg.platform.ae-1.nymcard.com/default/documentation/02_api_specs).
   No official hosted/remote MCP server was found for NymCard as of the probe date.
 server:
   name: nymcard-ncore
@@ -34,6 +32,11 @@ tools:
 - name: create_balance_limit
   description: Create a balance limit for spend control (POST /balancelimits)
   source_operation: createBalanceLimit
-notes: >-
-  Candidate tool list only. operationIds are taken verbatim from the published
-  nCore API reference operation anchors; no operations are invented.
+notes: Candidate tool list only. operationIds are taken verbatim from the published nCore API reference
+  operation anchors; no operations are invented.
+deployment:
+  mode: none
+  verified: derived
+  tools: 7
+  checked: '2026-08-12'
+  source: catalog MCP census
