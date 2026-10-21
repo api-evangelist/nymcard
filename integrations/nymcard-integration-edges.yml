@@ -1,0 +1,48 @@
+edges:
+- partner_name: CBUAE Register of licensed financial institutions (payments, stored value, exchange)
+  partner: null
+  partner_match: register-name
+  type: register
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://centralbank.ae/en/licensing/
+  category: UAE payment / stored-value / exchange licence
+  contract_reference:
+    register: CBUAE Register of licensed financial institutions (payments, stored value, exchange)
+    spec_file: null
+    standard: null
+    role: licensed-participant
+    registrations:
+    - registered_name: NymCard Payment Services L.L.C.
+      licences:
+      - Retail Payment Services
+      register_country: AE
+      matched_domain: null
+      matched_by: register-name
+      register_id: 08.01.02.001.2022.02
+      register_name_note: register-name 'nymcard' = nymcard; no wikidata P856
+    signal_note: 'participation only: a regulator licence / registration; no API conformance is published by this
+      register'
+    detected_by: sweep-sea-national-fintech-registers.py
+    detected: '2026-10-20'
+    matched_by: register-name
+    identity_source: register-name
+    identity_note: register gave only the name; exact normalised match to the repo's apis.yml name, one repo, Wikidata
+      P856 not contradicting (Kin 2026-10-20 decision 2)
+  detected_by: sweep-sea-national-fintech-registers.py
+  first_seen: '2026-10-20'
+generated: '2026-10-20'
+method: searched
+source:
+- https://www.banking.gov.tw/ch/home.jsp?id=642&parentpath=0,590,604
+- https://centralbank.ae/en/licensing/
+- https://centralbank.ae/umbraco/api/CBuaeregister/Get?language=en&ContentId=10202&institutionName=&liceseType=&headOffice=
+- https://www.bnm.gov.my/regulations/fsp-directory/msb-licensees
+- https://apidevportal.aspi-indonesia.or.id/direktori-publikasi
+checked:
+- https://apidevportal.aspi-indonesia.or.id/direktori-publikasi
+- https://centralbank.ae/en/licensing/
+- https://centralbank.ae/umbraco/api/CBuaeregister/Get?language=en&ContentId=10202&institutionName=&liceseType=&headOffice=
+- https://www.banking.gov.tw/ch/home.jsp?id=642&parentpath=0,590,604
+- https://www.bnm.gov.my/regulations/fsp-directory/msb-licensees
