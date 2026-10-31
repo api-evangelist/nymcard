@@ -107,7 +107,6 @@ Links to the company's own pages. This repository publishes no copy of their spe
 - [Documentation](https://docs.nymcard.com/)
 - [Getting started](https://docs.nymcard.com/get-started/quick-tutorial)
 - [API reference](https://portal.stg.platform.ae-1.nymcard.com/default/documentation/02_api_specs)
-- [Sign up](https://portal.sand.platform.nymcard.com/default/login)
 - [Support](https://www.nymcard.com/company/contact)
 - [Blog](https://www.nymcard.com/company/blog)
 - [Privacy policy](https://www.nymcard.com/legal/privacy)
